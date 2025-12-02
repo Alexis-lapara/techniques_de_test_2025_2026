@@ -24,20 +24,26 @@ Triangulator-> Client:
 Tests internes Triangulator:
 
 - Triangulation (algorithme) :
-    Test des entrée sortie du programme:
-        -test avec PointSet  ne correspondent pas au typage attendu -> message d'erreur 500 au client
-        -test avec PointSet vide -> message d'erreur 500 au client
+    Test des entrée sortie du programme: #test la fonctionaliter du programme 
+        -test avec PointSet  ne correspondent pas au typage attendu 
+        -test Poinset fonctionalité
+        -test avec PointSet vide 
         test fonctionnel:
             n == nombre de point dans pointSet
             -test avec  n < 3 renvoye aucun triangle 
             -test avec n == 3 renvoye 1 triangle  
             -test avec n > 3 renvoye n-2 triangles 
-test de la conversion binnaire des triangles -> sortie des triangles en format binaire
-
+test conversion binnaire  :
+    test de la conversion binnaire des triangles -> sortie des triangles en format binaire (plusieurs test fait)
+    test conversion binaire des pointset (grande valeur,valeur negative positive)
+    test valeurs extreme pour poinset et triangulation 
+    test valeur negatives/positive
+    test poinset/trianguulation vide
 Qualité de code :
     utilisation de ruff avec les regle déjà près ecrite dans pyprojet
+    documentation avec pdoc3
 
 Test de performence :
     temps de la conversion en binnaire des triangles 
-    temps de l'algo triangulation
+    temps de l'algo triangulation et de ça complexite
     
