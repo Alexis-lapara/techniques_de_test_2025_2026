@@ -3,8 +3,7 @@
 import struct
 
 import pytest
-
-from TP.encoding import decode_triangles, encode_triangles
+from encoding import decode_triangles, encode_triangles
 
 
 def test_encode_triangles_empty():

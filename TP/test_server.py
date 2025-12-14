@@ -3,8 +3,7 @@ import uuid
 from unittest.mock import patch
 
 import pytest
-
-from TP.triangulator_server import app
+from triangulator_server import app
 
 
 @pytest.fixture

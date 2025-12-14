@@ -1,8 +1,7 @@
 """Tests unitaires pour la fonction triangulate et _circumcircle_contains."""
 
 import pytest
-
-from TP.Triangulator import _circumcircle_contains, triangulate
+from Triangulator import _circumcircle_contains, triangulate
 
 
 def test_triangulate_empty():

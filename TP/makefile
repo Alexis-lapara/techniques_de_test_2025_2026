@@ -5,7 +5,7 @@ PYTEST = pytest
 COVERAGE = coverage
 RUFF = ruff
 PDOC = python -m pdoc
-SRC = TP
+SRC = .
 
 # -------------------------
 # Targets principales
@@ -39,8 +39,10 @@ lint:
 
 # Génère la documentation en HTML avec pdoc3
 doc:
-	$(PDOC) -o docs $(SRC)
+	$(PDOC) -o docs test_triangulation.py test_triangulation_encoding.py test_PointSet_encoding.py test_performance.py test_server.py Triangulator.py encoding.py triangulator_server.py
 
 # Nettoyage des fichiers temporaires et du coverage HTML
 clean:
-	rm -rf __pycache__ *.pyc *.pyo .pytest_cache .mypy_cache coverage.xml htmlcov docs
+	python -c "import shutil, os; \
+[shutil.rmtree(d, ignore_errors=True) for d in ('__pycache__', '.pytest_cache', '.mypy_cache', 'htmlcov', 'docs')]; \
+[os.remove(f) for f in ('coverage.xml',) if os.path.exists(f)]"

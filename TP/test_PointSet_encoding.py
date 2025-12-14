@@ -4,8 +4,7 @@ import math
 import struct
 
 import pytest
-
-from TP.encoding import decode_pointset, encode_pointset
+from encoding import decode_pointset, encode_pointset
 
 # -------------------- Tests d'encodage --------------------
 

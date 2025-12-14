@@ -3,14 +3,13 @@ import random
 import time
 
 import pytest
-
-from TP.encoding import (
+from encoding import (
     decode_pointset,
     decode_triangles,
     encode_pointset,
     encode_triangles,
 )
-from TP.Triangulator import triangulate
+from Triangulator import triangulate
 
 # -------------------------------------------------------
 # Helpers
