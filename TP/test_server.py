@@ -78,3 +78,4 @@ def test_pointset_manager_empty_data(mock_fetch, client):
     rv = client.get(f"/triangulation/{uuid.uuid4()}")
     assert rv.status_code == 500
     assert rv.is_json
+

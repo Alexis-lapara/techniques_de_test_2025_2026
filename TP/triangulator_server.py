@@ -15,10 +15,8 @@ app = Flask(__name__)
 # -------------------------------------------------------
 def fake_pointset_manager(pointSetId: str) -> bytes:
     """Renvoie un PointSet binaire déterministe à partir de l'UUID."""
-    try:
-        uid = uuid.UUID(pointSetId)
-    except ValueError:
-        uid = uuid.uuid4()
+    uid = uuid.UUID(pointSetId)
+
 
     seed = uid.int & 0xFFFFFFFF
     rng = random.Random(seed)
